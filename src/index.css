@@ -21,6 +21,38 @@ p {
   margin-bottom: 0px;
 }
 
+.fa-calendar-check {
+  color: blue;
+}
+.fa-graduation-cap {
+  color: green;
+}
+.fa-square-xmark {
+  color: tomato;
+}
+.fa-star {
+  color: gold;
+}
+.fa-flag {
+  color: aquamarine;
+}
+.fa-id-badge {
+  font-size: x-large;
+  color: aquamarine;
+}
+.fa-user-tie {
+  color: aquamarine;
+}
+.fa-code-branch {
+  font-size: x-large;
+  color: aquamarine;
+}
+
+.recharts-pie {
+  width: 450px;
+  height: 250px;
+}
+
 .Anime {
   width: 100vw;
   height: 100vh;

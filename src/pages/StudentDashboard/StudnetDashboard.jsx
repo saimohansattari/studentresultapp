@@ -1,22 +1,17 @@
 import React from "react";
 import { PersonImg } from "../../asserts";
+import Chart from "../../Components/Chart";
 import {
   PrimaryMainSection,
   SideNav,
-  PrimaryBtn,
   SecondaryBtn,
-  Card,
   SecondaryMainSection,
-  SubCard,
   SecondaryImg,
-  LargeTitleCard,
-  TextCard,
   Text,
   LargeText,
   SubCardFlex,
   TextBox,
   ChartCard,
-  Text17,
   Text20,
   TextBox_100,
 } from "../../Components/CSS-Styled-Commponents";
@@ -32,9 +27,18 @@ function StudnetDashboard() {
           <SubCardFlex>
             <SecondaryImg src={PersonImg} />
             <TextBox_100>
-              <LargeText>Sai Mohan Sattari</LargeText>
-              <Text>ID: 319127510043</Text>
-              <Text>Computer Science & Engineering</Text>
+              <LargeText>
+                <i class="fa-solid fa-user-tie"></i> &nbsp;&nbsp;Sai Mohan
+                Sattari
+              </LargeText>
+              <Text>
+                <i class="fa-solid fa-id-badge"></i>&nbsp;&nbsp; ID:
+                319127510043
+              </Text>
+              <Text>
+                <i class="fa-solid fa-code-branch"></i>&nbsp;&nbsp; Computer
+                Science & Engineering
+              </Text>
             </TextBox_100>
           </SubCardFlex>
 
@@ -76,7 +80,19 @@ function StudnetDashboard() {
           </SubCardFlex>
 
           <SubCardFlex>
-            <ChartCard></ChartCard>
+            <ChartCard>
+              {/* <PieChartStat /> */}
+              <Chart />
+              {/* <Text>Red : Absent</Text>
+              <Text>Red : Absent</Text> */}
+            </ChartCard>
+            <TextBox_100>
+              <Text20>Achivements :</Text20>
+              <Text>
+                <i class="fa-solid fa-bullseye"></i>&nbsp;&nbsp; Lorem ipsum
+                dolor sit amet consectetur adipisicing.
+              </Text>
+            </TextBox_100>
           </SubCardFlex>
         </SecondaryMainSection>
       </PrimaryMainSection>
