@@ -10,9 +10,11 @@ import {
   SubCard,
   SubSection,
   SPAN,
+  SPAN2,
   TitleCard,
+  FormImg,
 } from "../../Components/CSS-Styled-Commponents";
-import { PersonImg } from "../../asserts";
+import { PersonImg, LoginImg } from "../../asserts";
 
 function Home() {
   return (
@@ -20,7 +22,10 @@ function Home() {
       <MainSection>
         <SubSection>
           <PrimaryCard>
-            <TitleCard>Highest Marks</TitleCard>
+            <TitleCard>
+              Highest Marks <i class="fa-solid fa-trophy"></i>
+            </TitleCard>
+
             <Card>
               <PrimaryImg src={PersonImg} />
               <SPAN>
@@ -89,9 +94,9 @@ function Home() {
           </PrimaryCard>
         </SubSection>
         <Form>
+          <FormImg src={LoginImg} />
           <FormInput placeholder="Enter code / Registerd ID" />
           <PrimaryBtn>Submit</PrimaryBtn>
-          {/* <FormInput type="button"></FormInput> */}
         </Form>
       </MainSection>
     </>

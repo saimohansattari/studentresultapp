@@ -11,8 +11,8 @@ function App() {
   return (
     <Routers>
       <Routes>
-        {/* <Route path="/" element={<Home />} /> */}
-        <Route path="/" element={<StudnetDashboard />} />
+        <Route path="/" element={<Home />} />
+        <Route path="/StudentDashboard" element={<StudnetDashboard />} />
       </Routes>
       {/* <Home />; */}
     </Routers>

@@ -2,13 +2,18 @@ import styled from "styled-components";
 import { COLORS } from "./Colors";
 
 export const MainSection = styled.div`
-  background-color: ${COLORS.PRIMARY_100};
+  padding: 20px 250px;
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+  background-image: ${COLORS.GRADIENT_2};
   display: flex;
-  justify-content: space-around;
+  flex-wrap: wrap;
+  height: 100vh;
+  justify-content: space-between;
   align-items: center;
 `;
 
 export const PrimaryMainSection = styled.div`
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
   display: flex;
   background-color: #a3cce24b;
 `;
@@ -21,15 +26,17 @@ export const SubSection = styled.div`
   padding: 15px 0px;
   width: fit-content;
   height: fit-content;
-  background-color: white;
+  background-color: ${COLORS.PRIMARY_100};
+  border-radius: 15px;
+  box-shadow: 2px 2px 3px black;
 `;
 
 export const PrimaryCard = styled.div`
   padding: 0px 30px;
   display: flex;
   flex-direction: column;
+  background-color: ${COLORS.PRIMARY_100};
   gap: 15px;
-  /* width: 40vw; */
   height: 55vh;
   overflow: hidden;
   overflow-y: scroll;
@@ -41,19 +48,19 @@ export const PrimaryCard = styled.div`
 `;
 
 export const Card = styled.div`
-  padding: 8px;
+  padding: 8px 12px;
   display: flex;
   align-items: center;
   background-color: white;
-  border: 1px solid gray;
   border-radius: 25px;
+  box-shadow: 2px 2px 3px gray;
 `;
 
 export const SubCard = styled.div`
   display: flex;
   flex-direction: column;
   padding: 5px;
-  background-color: aqua;
+  /* background-color: aqua; */
   text-align: center;
 `;
 
@@ -94,11 +101,19 @@ export const SPAN = styled.div`
   justify-content: space-between;
 `;
 
+export const SPAN2 = styled.div`
+  margin-top: 60px;
+  padding: 5px;
+  background-color: red;
+`;
+
 export const TitleCard = styled.div`
+  /* background-color: ${COLORS.PRIMARY_100}; */
+  /* width: max-content; */
+  /* position: fixed; */
   padding: 15px;
-  font-family: "Lucida Sans", "Lucida Sans Regular", "Lucida Grande",
-    "Lucida Sans Unicode", Geneva, Verdana, sans-serif;
-  font-size: large;
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+  font-size: x-large;
   font-weight: bold;
 `;
 
@@ -125,6 +140,8 @@ export const PrimaryImg = styled.img`
   width: 4rem;
   height: 4rem;
   border-radius: 100px;
+  /* border: 1px solid gray; */
+  box-shadow: -2px 3px 2px gray;
   /* background-color: rebeccapurple; */
 `;
 export const SecondaryImg = styled.img`
@@ -134,22 +151,32 @@ export const SecondaryImg = styled.img`
   background-color: purple;
 `;
 
+export const FormImg = styled.img`
+  margin-left: 50px;
+  width: 250px;
+  height: 250px;
+  /* box-shadow: 2px 2px 2px gray; */
+`;
+
 export const Form = styled.form`
   width: 22rem;
-  height: 40vh;
-  padding: 15px 35px;
+  padding: 25px 45px;
   border: 1px solid gray;
   border-radius: 35px;
   display: flex;
-  gap: 25px;
+  gap: 15px;
   justify-content: center;
   flex-direction: column;
-  background-color: white;
+  border-radius: 15px;
+  box-shadow: 2px 2px 3px black;
+  background-color: ${COLORS.PRIMARY_100};
 `;
 
 export const FormInput = styled.input`
+  box-shadow: inset 2px 2px 4px gray;
   padding: 15px;
   font-size: medium;
+  border-radius: 15px;
   border: 1px solid gray;
 `;
 
