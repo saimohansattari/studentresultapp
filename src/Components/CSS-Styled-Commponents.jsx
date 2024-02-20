@@ -10,6 +10,17 @@ export const MainSection = styled.div`
   height: 100vh;
   justify-content: space-between;
   align-items: center;
+
+  @media only screen and (max-width: 1430px) {
+    padding: 20px 100px;
+  }
+
+  @media only screen and (max-width: 420px) {
+    padding: 50px 20px;
+    flex-wrap: wrap-reverse;
+    gap: 50px;
+    height: 100%;
+  }
 `;
 
 export const PrimaryMainSection = styled.div`
@@ -20,6 +31,10 @@ export const PrimaryMainSection = styled.div`
 
 export const SecondaryMainSection = styled.div`
   padding: 25px;
+
+  @media only screen and (max-width: 420px) {
+    padding: 30px 10px;
+  }
 `;
 
 export const SubSection = styled.div`
@@ -29,6 +44,10 @@ export const SubSection = styled.div`
   background-color: ${COLORS.PRIMARY_100};
   border-radius: 15px;
   box-shadow: 2px 2px 3px black;
+
+  @media only screen and (max-width: 420px) {
+    width: 90vw;
+  }
 `;
 
 export const PrimaryCard = styled.div`
@@ -40,7 +59,10 @@ export const PrimaryCard = styled.div`
   height: 55vh;
   overflow: hidden;
   overflow-y: scroll;
-  /* border: 1px solid gray; */
+
+  @media only screen and (max-width: 420px) {
+    padding: 0px 10px;
+  }
 
   &::-webkit-scrollbar {
     display: none;
@@ -60,7 +82,6 @@ export const SubCard = styled.div`
   display: flex;
   flex-direction: column;
   padding: 5px;
-  /* background-color: aqua; */
   text-align: center;
 `;
 
@@ -69,6 +90,11 @@ export const SubCardFlex = styled.div`
   display: flex;
   flex-wrap: wrap;
   gap: 20px;
+
+  @media only screen and (max-width: 420px) {
+    padding: 0px 10px;
+    margin-bottom: 20px;
+  }
 `;
 
 export const TextBox_100 = styled.div`
@@ -108,9 +134,6 @@ export const SPAN2 = styled.div`
 `;
 
 export const TitleCard = styled.div`
-  /* background-color: ${COLORS.PRIMARY_100}; */
-  /* width: max-content; */
-  /* position: fixed; */
   padding: 15px;
   font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
   font-size: x-large;
@@ -140,9 +163,7 @@ export const PrimaryImg = styled.img`
   width: 4rem;
   height: 4rem;
   border-radius: 100px;
-  /* border: 1px solid gray; */
   box-shadow: -2px 3px 2px gray;
-  /* background-color: rebeccapurple; */
 `;
 export const SecondaryImg = styled.img`
   width: 9rem;
@@ -155,7 +176,10 @@ export const FormImg = styled.img`
   margin-left: 50px;
   width: 250px;
   height: 250px;
-  /* box-shadow: 2px 2px 2px gray; */
+
+  @media only screen and (max-width: 420px) {
+    margin-left: 30px;
+  }
 `;
 
 export const Form = styled.form`
@@ -170,6 +194,11 @@ export const Form = styled.form`
   border-radius: 15px;
   box-shadow: 2px 2px 3px black;
   background-color: ${COLORS.PRIMARY_100};
+
+  @media only screen and (max-width: 420px) {
+    width: 80vw;
+    padding: 25px 20px;
+  }
 `;
 
 export const FormInput = styled.input`
@@ -210,6 +239,10 @@ export const SideNav = styled.div`
   padding: 25px 15px;
   width: 250px;
   border-right: 2px solid ${COLORS.NEUTRAL_2};
+
+  @media only screen and (max-width: 420px) {
+    display: none;
+  }
 `;
 
 export const ChartCard = styled.div`
@@ -220,4 +253,8 @@ export const ChartCard = styled.div`
   align-items: center;
   background-color: white;
   border-radius: 15px;
+
+  @media only screen and (max-width: 420px) {
+    padding: 15px 0px;
+  }
 `;

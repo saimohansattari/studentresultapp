@@ -5,6 +5,7 @@ function Chart() {
   return (
     <div>
       <PieChart
+        className="Demo"
         colors={["red", "green"]}
         series={[
           {
@@ -14,7 +15,7 @@ function Chart() {
             ],
           },
         ]}
-        width={400}
+        width={340}
         height={200}
       />
     </div>
