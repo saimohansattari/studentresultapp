@@ -1,5 +1,4 @@
 import React from "react";
-import { PersonImg } from "../../asserts";
 import Chart from "../../Components/Chart";
 import {
   PrimaryMainSection,
@@ -15,8 +14,19 @@ import {
   Text20,
   TextBox_100,
 } from "../../Components/CSS-Styled-Commponents";
+import { useParams } from "react-router-dom";
+import { Students } from "../../constants/SampleAPI";
 
 function StudnetDashboard() {
+  const { registeredId } = useParams();
+
+  const student = Students.find(
+    (student) => student.registered_id === registeredId
+  );
+
+  if (!student) {
+    return <div>No student found with the provided registered ID.</div>;
+  }
   return (
     <>
       <PrimaryMainSection>
@@ -25,19 +35,19 @@ function StudnetDashboard() {
         </SideNav>
         <SecondaryMainSection>
           <SubCardFlex>
-            <SecondaryImg src={PersonImg} />
+            <SecondaryImg src={student.image} />
             <TextBox_100>
               <LargeText>
-                <i class="fa-solid fa-user-tie"></i> &nbsp;&nbsp;Sai Mohan
-                Sattari
+                <i class="fa-solid fa-user-tie"></i> &nbsp;&nbsp;
+                {student.name}
               </LargeText>
               <Text>
                 <i class="fa-solid fa-id-badge"></i>&nbsp;&nbsp; ID:
-                319127510043
+                {student.registered_id}
               </Text>
               <Text>
-                <i class="fa-solid fa-code-branch"></i>&nbsp;&nbsp; Computer
-                Science & Engineering
+                <i class="fa-solid fa-code-branch"></i>&nbsp;&nbsp;{" "}
+                {student.branch}
               </Text>
             </TextBox_100>
           </SubCardFlex>
@@ -50,7 +60,8 @@ function StudnetDashboard() {
                 <i class="fa-solid fa-calendar-check"></i> Total Working Days
               </Text20>
               <Text>
-                <i class="fa-regular fa-flag"></i> &nbsp; &nbsp;360 Days
+                <i class="fa-regular fa-flag"></i> &nbsp; &nbsp;
+                {student.total_classes}&nbsp;Days
               </Text>
             </TextBox>
             <TextBox>
@@ -58,7 +69,8 @@ function StudnetDashboard() {
                 <i class="fa-solid fa-graduation-cap"></i> Number of Presented
               </Text20>
               <Text>
-                <i class="fa-regular fa-flag"></i> &nbsp; &nbsp; 250 Days
+                <i class="fa-regular fa-flag"></i> &nbsp; &nbsp;{" "}
+                {student.presented} &nbsp;Days
               </Text>
             </TextBox>
             <TextBox>
@@ -66,7 +78,8 @@ function StudnetDashboard() {
                 <i class="fa-solid fa-square-xmark"></i> Number of Absents
               </Text20>
               <Text>
-                <i class="fa-regular fa-flag"></i> &nbsp; &nbsp; 50 Days
+                <i class="fa-regular fa-flag"></i> &nbsp; &nbsp;{" "}
+                {student.absents} &nbsp;Days
               </Text>
             </TextBox>
             <TextBox>
@@ -74,23 +87,21 @@ function StudnetDashboard() {
                 <i class="fa-solid fa-star"></i> Toatal Percentage
               </Text20>
               <Text>
-                <i class="fa-regular fa-flag"></i> &nbsp;&nbsp;75 Percentage
+                <i class="fa-regular fa-flag"></i> &nbsp;&nbsp;{student.cgpa}
+                &nbsp; CGPA
               </Text>
             </TextBox>
           </SubCardFlex>
 
           <SubCardFlex>
             <ChartCard>
-              {/* <PieChartStat /> */}
               <Chart />
-              {/* <Text>Red : Absent</Text>
-              <Text>Red : Absent</Text> */}
             </ChartCard>
             <TextBox_100>
               <Text20>Achivements :</Text20>
               <Text>
-                <i class="fa-solid fa-bullseye"></i>&nbsp;&nbsp; Lorem ipsum
-                dolor sit amet consectetur adipisicing.
+                <i class="fa-solid fa-bullseye"></i>&nbsp;&nbsp;{" "}
+                {student.achievements}
               </Text>
             </TextBox_100>
           </SubCardFlex>

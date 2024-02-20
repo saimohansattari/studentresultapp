@@ -12,7 +12,10 @@ function App() {
     <Routers>
       <Routes>
         <Route path="/" element={<Home />} />
-        <Route path="/StudentDashboard" element={<StudnetDashboard />} />
+        <Route
+          path="/StudentDashboard/:registeredId"
+          element={<StudnetDashboard />}
+        />
       </Routes>
       {/* <Home />; */}
     </Routers>
