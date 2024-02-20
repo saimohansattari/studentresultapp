@@ -2,7 +2,7 @@ import styled from "styled-components";
 import { COLORS } from "./Colors";
 
 export const MainSection = styled.div`
-  padding: 20px 250px;
+  padding: 20px 200px;
   font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
   background-image: ${COLORS.GRADIENT_2};
   display: flex;
